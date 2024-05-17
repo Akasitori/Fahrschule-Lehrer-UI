@@ -1,0 +1,64 @@
+.body {
+    background-color: #e2d6fa;
+    padding-top: 100px;
+}
+
+.title-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 26px;
+}
+
+.search-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-header .filter input {
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+}
+
+.search-btn .btn {
+    background-color: #512556;
+    color: #fff;
+    font-size: 12px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.kalender {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px 50px;
+}
+
+.kalender .kalender-card {
+    width: 60%;
+}
+
+::ng-deep .mat-calendar-header {
+    padding: 0px;
+    background-color: #512556;
+    color: #fff;
+}
+
+::ng-deep .mat-mdc-button:not(:disabled) {
+    color: #fff !important;
+}
+
+::ng-deep .mat-calendar-arrow {
+    fill: #fff !important;
+}
+
+::ng-deep .mat-calendar-controls {
+    align-items: flex-start !important;
+}
+
+::ng-deep .mat-calendar-controls button:first-child {
+    width: 22% !important;
+}

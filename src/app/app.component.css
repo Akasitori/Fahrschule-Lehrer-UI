@@ -1,0 +1,76 @@
+/* Menu button */
+::ng-deep .mat-mdc-fab.mat-accent,
+.mat-mdc-mini-fab.mat-accent {
+    --mdc-fab-container-color: #ffc444;
+}
+
+/* Allgemein */
+.dashboard {
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+    position: absolute;
+}
+
+/* Navigation */
+.navigation {
+    background-color: #321845;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.heute {
+    background-color: #262956;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 0 2px 5px;
+}
+
+.navigation-background img {
+    background-color: #febd45;
+    opacity: 50%;
+}
+
+.Fahrschule-name {
+    color: #fff;
+    padding: 30px 20px 20px;
+    text-align: center;
+}
+
+.Fahrschule-name img {
+    border-radius: 50%;
+}
+
+.menu-options {
+    color: #fff;
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+.add-new-schueler {
+    width: 50%;
+}
+
+.menu-options button {
+    margin-bottom: 20px;
+}
+
+.menu-options a {
+    color: #fff;
+    text-decoration: none
+}
+
+.copyright {
+    bottom: 10px;
+    color: #fff;
+    left: 20px;
+    position: fixed;
+}
+
+/* Menu aufmachen */
+.open-navigation {
+    left: 20px;
+    position: absolute;
+    top: 20px;
+}

@@ -1,0 +1,141 @@
+.add-buchung-button {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.add-buchung-button button {
+    background-color: #fb6895;
+    color: #fff;
+}
+
+.body {
+    background-color: #e2d6fa;
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 26px;
+}
+
+.box-span {
+    background-color: #512556;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.box-span-inhalt {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+}
+
+.calendar-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+    height: 55px !important;
+}
+
+::ng-deep .mat-datepicker-content .mat-calendar {
+    height: auto !important;
+}
+
+.label-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-style {
+    background-color: #f88b50;
+    color: #fff;
+    font-size: 14px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 0px 10px 15px;
+}
+
+::ng-deep .calendar-box .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+.information-span {
+    padding: 0px 30px;
+    width: 95%;
+}
+
+.information-span .info-box {
+    padding: 20px;
+}
+
+.mat-accordion .mat-expansion-panel {
+    background-color: #e8d0f2;
+    margin-bottom: 15px;
+}
+
+::ng-deep .mat-expansion-panel-header {
+    background-color: #e8d0f2;
+}
+
+::ng-deep .mat-expansion-panel-body {
+    padding: 20px !important;
+}
+
+.termin-span {
+    background-color: green;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.termin-span-inhalt {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.information-span .info-box .row-span .column {
+    margin: 10px;
+    width: 90%;
+}
+
+.label-in-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-style-in-column {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 0px 10px 5px;
+}
+
+::ng-deep .mat-mdc-form-field{
+    width: 100% !important;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    height: 0px !important;
+}

@@ -1,0 +1,347 @@
+<div class="body">
+
+        <div class="title-span">
+
+            <div class="title-name">
+                <h1> <a href="#">Home</a> > <a href="/schuelerliste">Schülerliste</a> > Kontaktdaten von {{vorname}} {{nachname}}</h1>
+            </div>
+
+        </div>
+
+        <form [formGroup]="schuelerKontaktdatenFormular">
+
+            <div class="container">
+
+                <div class="box-span">
+
+                    <div class="box-span-inhalt">
+
+                        <!-- image -->
+                        <div class="change-image">
+                            <div class="schueler-image">
+                                <img src="../assets/img/profile/person10.png" width="150" height="150">                 
+                            </div>
+                            <button mat-raised-button> Avator ändern</button>
+                        </div>
+
+                        <div class="information-span">
+
+                            <!-- persönliche Information -->
+                            <div class="info-box">
+                                <h3> persönliche Information</h3>
+                                <!--vorname nachname-->
+                                <div class="row-span">
+
+                                    <div class="left">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Vorname</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="vorname"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="right">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Nachname</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill" class="input-style">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="nachname"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--geburtsdatum geschlecht-->
+                                <div class="row-span">
+
+                                    <div class="left">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Geschlecht</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill" class="input-style">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="geschlecht"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="right">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Geburtsdatum</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill" class="input-style">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="geburtsdatum"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Adresse -->
+                            <div class="info-box">
+                                <h3> Adresse</h3>
+                                <!--strasse hausnummer-->
+                                <div class="row-span">
+
+                                    <div class="left">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Straße</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="strasse"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="right">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Hausnummer</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill" class="input-style">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="hausnummer"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--stadt plz-->
+                                <div class="row-span">
+
+                                    <div class="left">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Stadt</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill" class="input-style">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="stadt"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="right">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Postleitzeil</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill" class="input-style">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="plz"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Kontaktdaten -->
+                            <div class="info-box">
+                                <h3> Kontaktdaten </h3>
+                                <!--telefonnummer email-->
+                                <div class="row-span">
+
+                                    <div class="left">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Telefonnummer</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="telnr"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="right">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Email Adresse</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill" class="input-style">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="email"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="info-box">
+                                <h3> Status </h3>
+                                <!--beginndatum des Fahrunterrichts status-->
+                                <div class="row-span">
+
+                                    <div class="left">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Beginndatum des Fahrunterrichts</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="datumDerAnmeldung"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="right">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Status</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill" class="input-style">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="status"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- weitere Info -->
+                            <div class="info-box">
+                                <h3> weitere Info </h3>
+                                <!--lehrer-name anmelde-id-->
+                                <div class="row-span">
+
+                                    <div class="left">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Lehrer</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill" class="input-style">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="lehrerName"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="right">
+                                        <div class="label-row">
+                                            <mat-label class="label-style">Anmelde ID</mat-label>
+                                        </div>
+                                        <div class="input-row">
+                                            <mat-form-field appearance="fill" class="input-style">
+                                                <input
+                                                    matInput
+                                                    type="text"
+                                                    formControlName="id"
+                                                    [readonly]="bearbeitenEingabeDeaktiviert"
+                                                />
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="info-box"  id="button-box">
+                                <div class="button-span">
+                                    <button 
+                                        mat-raised-button
+                                        (click)="openDialog()"
+                                        [disabled]="entziehenButtonDeaktiviert"
+                                        [ngClass]="{'deaktivierterButton': entziehenButtonDeaktiviert}"
+                                    >
+                                        Entziehen
+                                    </button>
+                                    <button 
+                                        mat-raised-button
+                                        routerLink="schuelerliste"
+                                        type="submit"
+                                    >
+                                        Alles Klar!
+                                    </button>
+                                </div>
+                            </div>     
+                            
+                        </div>
+
+                    </div>
+                
+                </div>
+            
+            </div>
+            
+        </form>
+
+  </div>

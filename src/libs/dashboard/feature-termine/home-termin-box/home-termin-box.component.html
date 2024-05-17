@@ -1,0 +1,9 @@
+<mat-card class="terminplanung-card" [ngStyle]="{ 'background-color': getBackgroundColor() }">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{beginn | date:'HH:mm'}} - {{ende | date:'HH:mm'}}</mat-card-title>
+      <mat-card-subtitle class="subtitle">{{currentDate | date: 'EEEE : dd-MMMM-yyyy'}}</mat-card-subtitle>
+      <h4> {{terminStatus}} </h4>
+    </mat-card-title-group>
+  </mat-card-header>
+</mat-card>

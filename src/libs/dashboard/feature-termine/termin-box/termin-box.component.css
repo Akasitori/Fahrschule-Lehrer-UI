@@ -1,0 +1,72 @@
+.information-span {
+    padding: 0px 30px;
+    width: 95%;
+}
+
+.information-span .info-box {
+    padding: 20px;
+}
+
+.information-span .info-box .row-span .column {
+    margin: 10px;
+    width: 90%;
+}
+
+.label-in-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-style-in-column {
+    color: #2e554d;
+    font-size: 14px;
+    padding: 10px 0px 10px 5px;
+}
+
+.termin-span {
+    background-color: gold;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.termin-span-inhalt {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Button */
+#button-box {
+    background-color: transparent;
+    margin-top: 30px;
+}
+
+.button-span {
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+.button-span button {
+    background-color: #764678;
+    color: #fff;
+}
+
+#genehmigen-btn{
+    background-color: #2e554d;
+}
+
+#absagen-btn{
+    background-color: red;
+}
+

@@ -1,0 +1,139 @@
+<div class="body">
+
+  <div class="title-span">
+    <h1> Willkommen {{lehrerVorname}} {{lehrerNachname}}!</h1>
+  </div>
+
+  <!-- schueler , Terminplanung -->
+  <div class="container-row">
+
+    <!--schüler span in Home -->
+    <div class="box-span">
+      <div class="box-span-inhalt">
+        <div class="box-title">
+          <h4>Schülerliste</h4>
+        </div>
+        <img src="../assets/img/profile/person15.png" width="150" height="150">                 
+        <div class="box-text">
+          <p>Durch diese Option können Sie alle angemeldeten Schüler ansehen. Wenn Sie auf einen bestimmten Schüler klicken, können Sie die Kontaktdaten des Schülers überprüfen und bearbeiten.</p>
+          <button 
+            mat-raised-button
+            routerLink="/schuelerliste"
+          >
+            Schüler anzeigen
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Terminplanung span in Home -->
+    <div class="box-span" id="terminplanung-span">
+      
+      <div class="box-span-inhalt">
+
+        <div class="box-title" id="terminplanung-title">
+          <h4>Terminplanung</h4>
+        </div>
+
+        <div class="information-span">
+
+          <!-- Custom box -->
+          <div *ngIf=" termineForTodayByLehrerId$ | async as termine">
+            <div *ngFor="let termin of termine.value">
+              <app-home-termin-box
+                [beginn]="termin.beginn"
+                [ende]="termin.ende"
+                [terminStatus]="termin.terminStatus"
+              ></app-home-termin-box>
+            </div>
+          </div>
+
+        </div>
+      
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Termin vereinbaren -->
+  <div class="container-row">
+
+    <div class="box-span" id="termin-vereinbaren-span">
+      <div class="box-span-inhalt">
+        <div class="box-text">
+          <h3>Wenn Sie entweder auf die Kalenderseite wechseln oder einen neuen Termin für heute vereinbaren,<br>können Sie mithilfe dieser Schaltflächen auf bestimmte Seiten zugreifen.</h3>
+          <div class="buttons">
+            <button 
+              mat-raised-button
+              routerLink="/kalender"
+            >
+              Kalender anzeigen
+            </button>
+            <button 
+              class="button-color"
+              mat-raised-button
+              routerLink="/kalender/termin"
+            >
+              Termin vereinbaren
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Berichterstattung , Bewertung & Feedback & Verwaltung von Fahrerlaubnis -->
+  <div class="container-row" >
+
+    <!--Berichterstattung span in Home -->
+    <div class="box-span"  id="last-row">
+      <div class="box-span-inhalt">
+        <div class="box-title" id="font-color-in-last-row">
+          <h4>Berichterstattung</h4>
+        </div>
+        <img src="../assets/img/images/1.png" width="200">                 
+        <div class="box-text" id="font-color-in-last-row">
+          <p>Durch diese Option können Sie Fahrausbildungskursen erstellen und aktualisieren und die Kursgebühren und Kurszeiten festlegen.</p>
+          <button mat-raised-button class="button-color">
+            Kursverwaltung anzeigen
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Bewertung & Feedback span in Home -->
+    <div  class="box-span" id="last-row">
+      <div class="box-span-inhalt">
+        <div class="box-title" id="font-color-in-last-row">
+          <h4>Bewertung und Feedback</h4>
+        </div>
+        <img src="../assets/img/images/2.png" width="200"> 
+        <div class="box-text" id="font-color-in-last-row">
+          <p>Durch diese Option können Sie die Fahrstunden für Schüler und Lehrer ansehen und der Verfügbarkeit von Fahrzeugen für die praktische Ausbildung überwachen.</p>
+          <button mat-raised-button class="button-color">
+            Fahrstundenplanung anzeigen
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Verwaltung von Fahrerlaubnis span in Home -->
+    <div  class="box-span"  id="last-row">
+      <div class="box-span-inhalt">
+        <div class="box-title" id="font-color-in-last-row">
+          <h4>Verwaltung von Fahrerlaubnissen</h4>
+        </div>
+        <img src="../assets/img/images/3.png" width="200"> 
+        <div class="box-text" id="font-color-in-last-row">
+          <p>Durch diese Option können Sie die Einnahmen und Ausgaben der Fahrschule verwalten und die Schülergebühren und Zahlungsrückständen überwachen.</p>
+          <button mat-raised-button class="button-color">Finanzverwaltung anzeigen</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+</div>

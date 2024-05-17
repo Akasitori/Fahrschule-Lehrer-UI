@@ -1,0 +1,69 @@
+<div body>
+  <div mat-dialog-content class="dialogFormFields">
+
+    <mat-form-field>
+      <input matInput
+            name="selected_time_A"
+            [format]="24"
+            [(ngModel)]="data.beginn"
+            [ngxMatTimepicker]="pickerA"
+            placeholder="Startzeit"
+            readonly />
+      <mat-icon matSuffix
+                (click)="pickerA.open()">
+          watch_later
+      </mat-icon>
+    </mat-form-field>
+    <ngx-mat-timepicker class="datepicker" #pickerA></ngx-mat-timepicker>
+                
+                        
+    <mat-form-field>
+      <input matInput
+            name="selected_time_B"
+            [format]="24"
+            [(ngModel)]="data.ende"
+            [ngxMatTimepicker]="pickerB"
+            placeholder="Endzeit"
+            readonly />
+      <mat-icon matSuffix
+                (click)="pickerB.open()">
+          watch_later
+      </mat-icon>
+    </mat-form-field>
+    <ngx-mat-timepicker #pickerB></ngx-mat-timepicker>
+                
+
+    <mat-form-field>
+      <mat-label>Schüler</mat-label>
+      <mat-select [(ngModel)]="data.schuelerId">
+        <span *ngIf="schuelerByLehrerId$ | async as schuelers">
+          <mat-option *ngFor="let schueler of schuelers.value" value="{{schueler.id}}">{{schueler.vorname}} {{schueler.nachname}}</mat-option>
+        </span>
+
+      </mat-select> 
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Übungstyp</mat-label>
+      <mat-select [(ngModel)]="data.uebungsTyp">
+        <mat-option  value="Uebungsfahrt">Übungsfahrt</mat-option>
+        <mat-option  value="Ueberlandstrasse">Überlandstrasse</mat-option>
+        <mat-option  value="Autobahn">Autobahn</mat-option>
+        <mat-option  value="Nachtfahrt">Nachtfahrt</mat-option>
+        <mat-option  value="Theoriepruefung">Theorieprüfung</mat-option>
+        <mat-option  value="Fahrpruefung">Fahrprüfung</mat-option>
+    </mat-select>
+    </mat-form-field>
+    
+
+  </div>
+
+  <div  class="actions">
+    <button mat-button (click)="onNoClick()">Abbrechen</button>
+    <button mat-button (click)="onOkClick()"  cdkFocusInitial>Ok</button>
+    <div *ngIf="chronologicalTimes == false">
+      <mat-error>Die Beginnzeit muss vor der Endzeit liegen</mat-error>
+    </div>
+  </div>
+
+</div>

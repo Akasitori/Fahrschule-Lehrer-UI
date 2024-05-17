@@ -1,0 +1,232 @@
+<div class="body">
+
+  <div class="title-span">
+
+    <div class="title-name">
+        <h1> <a href="#">Home</a> > <a href="/kalender"> Kalender</a> > Termin vereinbaren</h1>
+    </div>
+
+    <div class="date-span">
+      <div *ngIf="receivedDate">
+        <h3>{{ receivedDate | date: 'EEEE : dd-MMMM-yyyy'}}</h3>
+      </div>
+    </div>
+
+  </div>
+
+<div class="container">
+
+  <!-- neue Buchung hinzufügen -->
+  <div class="box-span">
+
+    <form>
+
+      <div class="box-span-inhalt">
+
+        <div class="information-span">
+
+          <div class="info-box">
+    
+            <div class="row-span">
+
+              <div class="left">
+                
+                <div class="beginn">
+                  <div class="label-row">
+                      <mat-label class="label-style">Beginn</mat-label>
+                  </div>
+                  <div class="input-row">
+                      <mat-form-field appearance="fill">
+                          <input
+                              matInput
+                              type="time"
+                              placeholder=""
+                          />
+                      </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="schueler">
+                  <div class="label-row">
+                    <mat-label class="label-style">Schüler</mat-label>
+                  </div>
+                  <div class="input-row">
+                    <mat-form-field appearance="fill" class="input-style">
+                        <mat-select>
+                            <mat-option value="aktiv">Aktiv</mat-option>
+                            <mat-option value="inaktiv">Inaktiv</mat-option>
+                            <mat-option value="theorie-bestanden">Theorie bestanden</mat-option>
+                            <mat-option value="bestanden">bestanden</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="right">
+
+                <div class="end">
+                  <div class="label-row">
+                      <mat-label class="label-style">End</mat-label>
+                  </div>
+                  <div class="input-row">
+                      <mat-form-field appearance="fill" class="input-style">
+                          <input
+                              matInput
+                              type="time"
+                              placeholder=""
+                          />
+                      </mat-form-field>
+                  </div>  
+                </div>
+
+                <div class="typ">
+                  <div class="label-row">
+                      <mat-label class="label-style">Typ</mat-label>
+                  </div>
+                  <div class="input-row">
+                    <mat-form-field appearance="fill" class="input-style">
+                      <mat-select>
+                          <mat-option value="uebung">Übung</mat-option>
+                          <mat-option value="ueberlandstrasse">Überlandstraße</mat-option>
+                          <mat-option value="autobahn">Autobahn</mat-option>
+                          <mat-option value="nachtfahrt">Nachtfahrt</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>  
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="info-box">
+              <div class="button-span">
+                <button mat-raised-button>Bearbeiten</button>
+                <button mat-raised-button>Löschen</button>
+                <button mat-raised-button>Speichern</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      
+      </div>
+
+    </form>
+
+  </div>
+
+  <!-- kann gelöscht werden -->
+  <div class="box-span">
+
+    <form>
+
+      <div class="box-span-inhalt">
+
+        <div class="information-span">
+
+          <div class="info-box">
+    
+            <div class="row-span">
+
+              <div class="left">
+                
+                <div class="beginn">
+                  <div class="label-row">
+                      <mat-label class="label-style">Beginn</mat-label>
+                  </div>
+                  <div class="input-row">
+                      <mat-form-field appearance="fill">
+                          <input
+                              matInput
+                              type="time"
+                              placeholder=""
+                          />
+                      </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="schueler">
+                  <div class="label-row">
+                    <mat-label class="label-style">Schüler</mat-label>
+                  </div>
+                  <div class="input-row">
+                    <mat-form-field appearance="fill" class="input-style">
+                        <mat-select>
+                            <mat-option value="aktiv">Aktiv</mat-option>
+                            <mat-option value="inaktiv">Inaktiv</mat-option>
+                            <mat-option value="theorie-bestanden">Theorie bestanden</mat-option>
+                            <mat-option value="bestanden">bestanden</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="right">
+
+                <div class="end">
+                  <div class="label-row">
+                      <mat-label class="label-style">End</mat-label>
+                  </div>
+                  <div class="input-row">
+                      <mat-form-field appearance="fill" class="input-style">
+                          <input
+                              matInput
+                              type="time"
+                              placeholder=""
+                          />
+                      </mat-form-field>
+                  </div>  
+                </div>
+
+                <div class="typ">
+                  <div class="label-row">
+                      <mat-label class="label-style">Typ</mat-label>
+                  </div>
+                  <div class="input-row">
+                    <mat-form-field appearance="fill" class="input-style">
+                      <mat-select>
+                          <mat-option value="uebung">Übung</mat-option>
+                          <mat-option value="ueberlandstrasse">Überlandstraße</mat-option>
+                          <mat-option value="autobahn">Autobahn</mat-option>
+                          <mat-option value="nachtfahrt">Nachtfahrt</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>  
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="info-box">
+              <div class="button-span">
+                <button mat-raised-button>Bearbeiten</button>
+                <button mat-raised-button>Löschen</button>
+                <button mat-raised-button>Speichern</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      
+      </div>
+
+    </form>
+
+  </div>
+
+  <!-- add button bottom the Page -->
+  <div class="add-button">
+    <button mat-raised-button><mat-icon>add_circle</mat-icon>neue Buchung hinzufügen</button>
+  </div>
+
+</div>

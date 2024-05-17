@@ -1,0 +1,57 @@
+<div class="body">
+
+    <div class="title-row">
+
+      <div class="title-name">
+        <h1> <a href="#">Home</a> > Schülerliste</h1>
+      </div>
+
+      <div class="search-header">
+        
+        <div class="filter">
+          <input
+            matInput
+            class="search-input"
+            type="text"
+            placeholder="Nachname"
+          />
+        </div>
+
+        <div class="search-btn">
+          <button mat-raised-button class="btn"> Suchen </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+
+      <mat-tab label="Schüler">
+        <div class="schuelerAuflistung" *ngIf="schuelerByLehrerId$ | async as schuelers">
+          <app-schueler-feedcard
+            *ngFor="let schueler of schuelers.value"
+              [vorname]="schueler.vorname"
+              [nachname]="schueler.nachname"
+              [status]="schueler.status"
+              [id]="schueler.id"
+          >
+          </app-schueler-feedcard>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="neue Schüler">
+        <div class="schuelerAuflistung" *ngIf="schuelerMitNeuemStatus$ | async as schuelers">
+          <app-neue-schueler-feedcard
+            *ngFor="let schueler of schuelers.value"
+              [vorname]="schueler.vorname"
+              [nachname]="schueler.nachname"
+              [id]="schueler.id"
+          >
+          </app-neue-schueler-feedcard>
+        </div>
+      </mat-tab>
+  
+    </mat-tab-group>
+    
+</div>

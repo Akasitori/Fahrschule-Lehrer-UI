@@ -1,0 +1,44 @@
+.body {
+    background-color: #e2d6fa;
+    padding-top: 100px;
+    height: 100%;
+}
+
+.title-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 26px;
+}
+
+.search-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-header .filter input {
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+}
+
+.search-btn .btn {
+    background-color: #512556;
+    color: #fff;
+    font-size: 12px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.schuelerAuflistung {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+::ng-deep .mat-mdc-tab-labels {
+    padding: 0px 80px 50px;
+}

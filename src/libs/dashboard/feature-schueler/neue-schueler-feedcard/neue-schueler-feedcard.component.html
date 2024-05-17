@@ -1,0 +1,29 @@
+
+<div class="body">
+
+    <mat-card class="profile-card">
+
+        <mat-card-header>
+            <img src="assets\img\profile\person7.png"  width="100" height="100"alt="image">
+        </mat-card-header>
+
+        <mat-card-content>
+            <h3>{{vorname}} {{nachname}}</h3>
+        </mat-card-content>
+        
+        <mat-card-actions>
+            <button 
+                mat-raised-button
+                routerLink="kontaktdaten/{{id}}"
+            >
+                Kontaktdaten
+            </button>
+
+            <button mat-raised-button>
+                Löschen
+            </button>
+        </mat-card-actions>
+
+    </mat-card>
+
+</div>

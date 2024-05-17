@@ -1,0 +1,22 @@
+.terminplanung-card{ 
+    color: #fff;
+    margin-bottom: 10px !important;
+    padding-bottom: 15px !important;
+}
+  
+.terminplanung-card .subtitle{
+    color: #fff;
+    font-weight: 300;
+}
+
+#green-box{
+    background-color: green;
+}
+  
+#yellow-box{
+    background-color: #ffc444;
+}
+
+#red-box{
+    background-color: #ff4444;
+}

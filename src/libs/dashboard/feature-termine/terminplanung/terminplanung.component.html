@@ -1,0 +1,72 @@
+<div class="body">
+
+    <div class="title-span">
+  
+      <div class="title-name">
+          <h1> <a href="#">Home</a> > Terminplanung </h1>
+      </div>
+  
+    </div>
+
+    <div class="container">
+
+        <div class="box-span">
+      
+            <div class="box-span-inhalt">
+      
+                <!-- startdatum - enddatum -->
+                <div class="calendar-box">
+
+                    <!-- choose start and end date -->
+                    <app-select-date-range (dateRangeSelected)="onDateRangeSelected($event)"></app-select-date-range>
+
+                </div>
+
+              <div class="information-span">
+      
+                <!-- z.B:heute -->
+                <div *ngFor="let date of this.dateList">
+                    <mat-accordion>
+
+                        <mat-expansion-panel (opened)="panelOpenState = true"
+                                            (closed)="panelOpenState = false">
+
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                {{date | date: 'EEEE : dd-MMMM-yyyy'}}
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <!--eine fahrstunden -->
+                            
+                            <div *ngIf="terminByLehrerId$ | async as termine">
+                                <div *ngFor="let termin of termine.value">
+                                    <app-termin-box *ngIf="isToday(date.toString(), termin.beginn.toString())"
+                                        [beginn]="termin.beginn"
+                                        [ende]="termin.ende"
+                                        [terminDauerInMinuten]="termin.terminDauerInMinuten"
+                                        [uebungsTyp]="termin.uebungsTyp"
+                                        [terminStatus]="termin.terminStatus"
+                                        [id]="termin.id"
+                                    ></app-termin-box>
+                                </div>
+                            </div> 
+
+                            <div class="add-buchung-button">
+                                <button mat-raised-button (click)="openAddBuchungDialog(date)"><mat-icon>add_circle</mat-icon>neue Buchung hinzufügen</button>
+                            </div>
+
+                        </mat-expansion-panel>
+
+                    </mat-accordion>
+                </div>
+
+              </div>
+            
+            </div>
+      
+        </div>
+
+    </div>
+        
+</div>

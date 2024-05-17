@@ -1,0 +1,50 @@
+<mat-drawer-container class="dashboard" autosize>
+
+  <!--Navigation-->
+  <mat-drawer #drawer class="navigation" mode="side" opened>
+    
+    <!--Heute Datum-->
+    <div class="heute">
+      {{heute | date:'dd MMMM y - EEEE H:mm'}}
+    </div>
+
+    <!--Navigation Background-->
+    <div class="navigation-background">
+      <img id="selectNavigationImage" height="150"> 
+    </div>
+
+    <!--Fahschule Anwendung-->
+    <div class="Fahrschule-name">
+      <h1>Fahrschule "Marburg an der Lahn"</h1>
+      <img src="../assets/img/profile/person7.png" alt="admin-photo" width="150" height="150"> 
+    </div>
+
+    <!--all Menu Options-->
+    <div class="menu-options">
+      <h3><a href="/fahrlehrerdaten">Meine Daten</a></h3>
+      <h3><a href="/schuelerliste">Liste der Schüler</a></h3>
+      <h3><a href="/terminplanung">Terminplanung</a></h3>
+      <h3><a href="#">Berichterstattung</a></h3>
+      <h3><a href="#">Bewertung und Feedback</a></h3>
+      <h3><a href="/kalender">Kalender und Termin vereinbaren</a></h3>
+      <h3><a href="#">Verwaltung von Fahrerlaubnissen</a></h3>
+    </div>
+
+    <!--copyright-->
+    <div class="copyright">
+      <h5> ©2023-2024 | Behnoush Tasharrofi - Dominik Schönheit</h5>
+    </div>
+
+  </mat-drawer>
+
+  <!--Open Navigation-->
+  <div class="open-navigation">
+    <button type="button" mat-fab (click)="drawer.toggle()">
+      <mat-icon fontIcon="menu"></mat-icon>
+    </button>
+  </div>
+
+  <!--Container-->
+  <router-outlet></router-outlet>
+  
+</mat-drawer-container>

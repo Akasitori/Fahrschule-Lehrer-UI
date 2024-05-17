@@ -1,0 +1,141 @@
+<div class="termin-span" [ngStyle]="{ 'background-color': getBackgroundColor() }">
+
+    <form>
+
+        <div class="termin-span-inhalt">
+
+            <div class="information-span">
+
+                <div class="info-box">
+
+                    <div class="row-span">
+
+                        <!-- Beginn -->
+                        <div class="column">
+                            
+                            <div class="label-in-column">
+                                <mat-label class="label-style-in-column">Beginn</mat-label>
+                            </div>
+
+                            <div class="input-row">
+                                <mat-form-field appearance="fill">
+                                    <input
+                                        disabled
+                                        matInput
+                                        type="text"
+                                        placeholder="00:00"
+                                        value="{{beginn | date: 'HH:mm'}}"
+                                    />
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <!-- End -->
+                        <div class="column">
+            
+                            <div class="label-in-column">
+                                <mat-label class="label-style-in-column">End</mat-label>
+                            </div>
+
+                            <div class="input-row">
+                                <mat-form-field appearance="fill" class="input-style">
+                                    <input
+                                        disabled
+                                        matInput
+                                        type="text"
+                                        placeholder="00:00"
+                                        value="{{ende | date: 'HH:mm'}}"
+                                    />
+                                </mat-form-field>
+                            </div>
+            
+                        </div>
+
+                        <!-- dauer -->
+                        <div class="column">
+            
+                            <div class="label-in-column">
+                                <mat-label class="label-style-in-column">Dauer</mat-label>
+                            </div>
+
+                            <div class="input-row">
+                                <mat-form-field appearance="fill" class="input-style">
+                                    <input
+                                        disabled
+                                        matInput
+                                        type="text"
+                                        placeholder="90Min"
+                                        value="{{terminDauerInMinuten}} min"
+                                    />
+                                </mat-form-field>
+                            </div>
+            
+                        </div>
+          
+                    </div>
+
+                    <div class="row-span">
+
+                        <!-- Typ -->
+                        <div class="column">
+            
+                            <div class="label-in-column">
+                                <mat-label class="label-style-in-column ">Typ</mat-label>
+                            </div>
+
+                            <div class="input-row">
+                                <mat-form-field appearance="fill" class="input-style">
+                                    <input
+                                        disabled
+                                        matInput
+                                        type="text"
+                                        placeholder="Übungsfahrt"
+                                        value="{{uebungsTyp}}"
+                                    />
+                                </mat-form-field>
+                            </div>
+            
+                        </div>
+
+                        <!-- Status -->
+                        <div class="column">
+            
+                            <div class="label-in-column">
+                                <mat-label class="label-style-in-column ">Status</mat-label>
+                            </div>
+
+                            <div class="input-row">
+                                <mat-form-field appearance="fill" class="input-style">
+                                    <input
+                                        disabled
+                                        matInput
+                                        type="text"
+                                        placeholder="keine Bestätigung"
+                                        value="{{terminStatus}}"
+                                    />
+                                </mat-form-field>
+                            </div>
+            
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="column">
+                            <div class="info-box"  id="button-box">
+                                <div class="button-span">
+                                    <button mat-raised-button id="nachricht-senden-btn">Nachricht Senden</button>
+                                </div>
+                            </div>
+                        </div>
+          
+                    </div>
+
+                </div>
+
+            </div>
+  
+        </div>
+
+    </form>
+
+</div>
